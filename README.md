@@ -1,6 +1,7 @@
 # Tools
 
 ## sql_utils
+Provides uility functions to run multi-line sql in Python environment.
 
 ### Run from string
 ```python
@@ -24,7 +25,14 @@ select
     * 
 from 
 green.cur_c_m_order_master 
-limit 1;
+limit 1
+;
+
+select
+    count(*) cnt
+from 
+green.cur_c_m_order_master 
+;
 ```
 
 Note that special treatment is needed when comments are added to sql file (due to limitation of ``RedshiftHook``):
